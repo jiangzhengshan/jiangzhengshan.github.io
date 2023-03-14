@@ -1,0 +1,187 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>redis | jiangzhengshan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jiangzhengshan.github.io/favicon.ico?v=1678776670121">
+<link rel="stylesheet" href="https://jiangzhengshan.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="Mac安装Redis，原来就是这么简单
+
+https://huaweicloud.csdn.net/637ee66ddf016f70ae4c90af.html
+安装好之后需要根据要求修改配置文件
+redis默认是不支持远程连接的，需要手动开..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jiangzhengshan.github.io">
+        <img src="https://jiangzhengshan.github.io/images/avatar.png?v=1678776670121" class="site-logo">
+        <h1 class="site-title">jiangzhengshan</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/springboot" class="site-nav">
+            SpringBoot
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/chang-yong-linux-ming-ling" class="site-nav">
+            Linux 命令
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/jian-dan-li-jie-oauth-20-shou-quan-ji-zhi" class="site-nav">
+            OAuth2 协议
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-ren-shi-xiang-mu-zhi-shi-dian-zheng-li" class="site-nav">
+            微人事项目知识点
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/nginx" class="site-nav">
+            项目部署
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-xin-xiao-cheng-xu" class="site-nav">
+            微信小程序
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/jiangzhengshan" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      用来记录工作和生活中遇到的问题
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://jiangzhengshan.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">redis</h2>
+            <div class="post-date">2023-01-12 10:40</div>
+            
+            <div class="post-content" v-pre>
+              <pre><code>Mac安装Redis，原来就是这么简单
+</code></pre>
+<p>https://huaweicloud.csdn.net/637ee66ddf016f70ae4c90af.html<br>
+安装好之后需要根据要求修改配置文件<br>
+redis默认是不支持远程连接的，需要手动开启<br>
+/usr/local/etc/redis.conf<br>
+1.daemonize 这是守护进程的意思，默认是no，我们修改为yes，这样当我们启动redis服务的时候，就不会占用我们的窗口了<br>
+2.bind 127.0.0.1这个是绑定了我们的主机地址，意思是只允许我们主机访问redis，这句话注销掉，因为我们需要远程访问<br>
+3.requirepass既然我们设置了允许远程访问，那密码是必不可少的，如果我们设置了密码，客户端连接redis时需要通过auto 命令提供密码，设置成自己的密码例如123<br>
+配置文件修改成功之后重启redis-server<br>
+redis-server /usr/local/etc/redis.conf<br>
+特点<br>
+-支持数据库持久化<br>
+-支持多种不同的数据结构类型之间的映射<br>
+-支持主从模式的数据备份<br>
+-自带了发布订阅系统<br>
+-定时器,计数器<br>
+Lettuce 和 Jedis 的一个比较:</p>
+<ol>
+<li>
+<p>Jedis 在实现的过程中是直接连接 Redis 的，在多个线程之间共享一个 Jedis 实例，这是线城不安 全的，如果想在多线程场景下使用 Jedis，就得使用连接池，这样，每个线城都有自己的 Jedis 实 例。</p>
+</li>
+<li>
+<p>Lettuce 基于目前很火的 Netty NIO 框架来构建，所以克服了 Jedis 中线程不安全的问题，Lettuce 支持同步、异步 以及 响应式调用，多个线程可以共享一个连接实例。</p>
+<p>做分布式锁<br>
+解决超时问题引用Lua脚本</p>
+</li>
+</ol>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jiangzhengshan.github.io/post/npm-install-bao-cuo/">
+                  <h3 class="post-title">
+                    npm install 报错
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>微人事项目知识点整理 | jiangzhengshan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jiangzhengshan.github.io/favicon.ico?v=1678776670121">
+<link rel="stylesheet" href="https://jiangzhengshan.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="项目中应用的技术
+1.SpringBoot(SSM)
+2.SpringSecurity(权限管理)
+3.redis
+4.POI/邮件发送/消息中间件
+5.MySQL
+6.vue
+7.axios
+8.ElementUI
+9Vuex
+
+SPA
+..." />
+    <meta name="keywords" content="" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jiangzhengshan.github.io">
+        <img src="https://jiangzhengshan.github.io/images/avatar.png?v=1678776670121" class="site-logo">
+        <h1 class="site-title">jiangzhengshan</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/springboot" class="site-nav">
+            SpringBoot
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/chang-yong-linux-ming-ling" class="site-nav">
+            Linux 命令
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/jian-dan-li-jie-oauth-20-shou-quan-ji-zhi" class="site-nav">
+            OAuth2 协议
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-ren-shi-xiang-mu-zhi-shi-dian-zheng-li" class="site-nav">
+            微人事项目知识点
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/nginx" class="site-nav">
+            项目部署
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-xin-xiao-cheng-xu" class="site-nav">
+            微信小程序
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/jiangzhengshan" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      用来记录工作和生活中遇到的问题
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://jiangzhengshan.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">微人事项目知识点整理</h2>
+            <div class="post-date">2023-02-14 15:37</div>
+            
+            <div class="post-content" v-pre>
+              <p>项目中应用的技术<br>
+1.SpringBoot(SSM)<br>
+2.SpringSecurity(权限管理)<br>
+3.redis<br>
+4.POI/邮件发送/消息中间件<br>
+5.MySQL<br>
+6.vue<br>
+7.axios<br>
+8.ElementUI<br>
+9Vuex</p>
+<!-- more -->
+<pre><code>SPA
+</code></pre>
+<p>single page application 单页面应用(整个项目只有一个html页面)</p>
+<!-- more -->
+<pre><code>动态权限控制
+</code></pre>
+<p>1.用户登录之后从前端发送http请求，在后台分析http请求与数据库中匹配吻合，提取所需的角色<br>
+2.当前登录的角色是否具备所需的角色</p>
+<!-- more -->
+<p>一般来说menu菜单不需要每次都请求，可以放在缓存中</p>
+<!-- more -->
+<pre><code>存储过程
+</code></pre>
+<p>将一部分计算转移到数据上操作了，可能会执行多条SQL，网络上会花费很长时间<br>
+缺点:假如需要切换数据库的话，切换存储过程就麻烦了</p>
+<p>问题一：项目重启之后前端点击，不显示尚未登录，请登录， 显示未知错误</p>
+
+            </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jiangzhengshan.github.io/post/springboot/">
+                  <h3 class="post-title">
+                    SpringBoot
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

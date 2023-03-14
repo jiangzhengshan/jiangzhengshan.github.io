@@ -1,0 +1,390 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>SpringBoot | jiangzhengshan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jiangzhengshan.github.io/favicon.ico?v=1678776670121">
+<link rel="stylesheet" href="https://jiangzhengshan.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="? 多方登陆
+？短信请求
+？二维码支付
+？模糊检索
+？kafaka
+？各种注解之间的不同之处
+
+注解
+
+@SprinBootConfiguration: @Config 增强和代理
+@EnableAutoConfiguration:  导入..." />
+    <meta name="keywords" content="StringBoot" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jiangzhengshan.github.io">
+        <img src="https://jiangzhengshan.github.io/images/avatar.png?v=1678776670121" class="site-logo">
+        <h1 class="site-title">jiangzhengshan</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/springboot" class="site-nav">
+            SpringBoot
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/chang-yong-linux-ming-ling" class="site-nav">
+            Linux 命令
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/jian-dan-li-jie-oauth-20-shou-quan-ji-zhi" class="site-nav">
+            OAuth2 协议
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-ren-shi-xiang-mu-zhi-shi-dian-zheng-li" class="site-nav">
+            微人事项目知识点
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/nginx" class="site-nav">
+            项目部署
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-xin-xiao-cheng-xu" class="site-nav">
+            微信小程序
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/jiangzhengshan" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      用来记录工作和生活中遇到的问题
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://jiangzhengshan.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">SpringBoot</h2>
+            <div class="post-date">2023-01-13 11:02</div>
+            
+            <div class="post-content" v-pre>
+              <pre><code>? 多方登陆
+？短信请求
+？二维码支付
+？模糊检索
+？kafaka
+？各种注解之间的不同之处
+
+注解
+</code></pre>
+<p>@SprinBootConfiguration: @Config 增强和代理<br>
+@EnableAutoConfiguration:  导入自动化配置<br>
+@ComponentScan: 扫描启动类</p>
+<!-- more -->
+<pre><code>配置文件可以放在四个位置,优先级依次降低
+</code></pre>
+<p>1.config/application.properties<br>
+2.application.properties<br>
+3.src/main/resources/config/application.properties 一般项目中放在这里<br>
+4.src/main/resources/application.properties</p>
+<!-- more -->
+<pre><code>类型安全的属性注入
+</code></pre>
+<p>@ConfigurationProperties(prefix = &quot;类名&quot;)</p>
+<!-- more -->
+<pre><code> 日志框架 logbook + slf4J
+</code></pre>
+<p>https://mp.weixin.qq.com/s/kkp2PTC3rbmHlXHnF95FLw</p>
+<!-- more -->
+<pre><code>SpringBoot + thymeleaf
+</code></pre>
+<p>https://mp.weixin.qq.com/s/Uvv1q3iQn2IwAB1crHWS1g</p>
+<!-- more -->
+<pre><code>SpringBoot + Freemarker
+</code></pre>
+<p>https://mp.weixin.qq.com/s/1TZfOBMtrTJ7qKHEduLUEw</p>
+<!-- more -->
+<pre><code>代码自动生成模版
+</code></pre>
+<p>GitHub：https://github.com/lenve/generate_code<br>
+需要修改数据库名和密码<br>
+生成的包名必须一致 org.javboy.test   想写什么写什么<br>
+用到的工程需要在pom.xml配置build<br>
+<img src="https://jiangzhengshan.github.io/post-images/1674985916707.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>视图共存问题
+</code></pre>
+<p>Freemarker + thymeleaf 同时存在先加载Freemarker 两个优先级一样  视图都能看见<br>
+Freemarker + jsp 同时存在先加载Freemarker 优先级前后高于后者， jsp是最低的 视图都能看见<br>
+thymeleaf + jsp 同时存在 jsp视图看不见 因为thymeleaf不具备检查视图的能力<br>
+Freemarker + thymeleaf + jsp 同时存在  要配置两个检查能力 三个视图就能共存</p>
+<!-- more -->
+<pre><code>三大主流框架
+</code></pre>
+<p>-jackson<br>
+-gson<br>
+-fastjson 不常用<br>
+SpringMVC框架中，jacks on与gson已经自动配置好了<br>
+序列化: 对象-&gt; json （响应json）<br>
+反序列化: json -&gt; 对象 （请求参数是json）<br>
+所有的JSON工具都提供各自的httpMessageConvert （web环境）<br>
+-jsckson: MappingJackson2HttpMessageConverter 自动配置好只需添加依赖就能使用<br>
+-gson:GsonHttpMessageConverter 自动配置好只需添加依赖就能使用<br>
+-fastjson: FastjsonHttpMessageConverter 需要开发者手动配置httpMessageConvert 再加依赖</p>
+<!-- more -->
+<pre><code>JSON配置
+</code></pre>
+<p>一 .在各个对象上配置<br>
+@JsonProperty 指定属性序列化/反序列化时的名称，默认名称就是属性名<br>
+@JsonIgnore 指定属性序列化/反序列化时忽略某一个字段<br>
+@JsonIgnoreProperties({&quot;aa&quot;,&quot;bb&quot;}) 再类上写 批量忽略字段<br>
+@JsonFormat(pattern = &quot;yyyy-mm-dd HH:mm:ss， timezone = &quot;Asia/Shanghai&quot;) 时间格式化<br>
+@JsonPropertyOrder 类似于JsonProperty中的index<br>
+二.全局配置<br>
+写一个objectMapper配置类<br>
+<img src="https://jiangzhengshan.github.io/post-images/1674985841587.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>GSON配置
+</code></pre>
+<p><a href="https://jiangzhengshan.github.io/post-images/1674986951307.png"></a><br>
+写一个配置类<br>
+<img src="https://jiangzhengshan.github.io/post-images/1674987059126.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>FastJson配置 要额外配置版本号
+</code></pre>
+<p><img src="https://jiangzhengshan.github.io/post-images/1675043034625.png" alt="" loading="lazy"><br>
+手动配置httpMessageConvert<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675043192304.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>处理静态资源
+</code></pre>
+<p>可以存放在5个位置优先级从高到低依次是<br>
+META-INF.resources - resources - static - public - webapp</p>
+<!-- more -->
+<pre><code>文件上传
+</code></pre>
+<p>MultipartResolver<br>
+一般企业开发上传文件都是云存储只需要调用api即可</p>
+<!-- more -->
+<pre><code>@ControllerAdivce
+</code></pre>
+<p>-全局异常处理 :写一个类专门处理项目中存在的异常<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675050616883.png" alt="" loading="lazy"><br>
+-全局数据绑定: 写一个类专门定义全局变量，到时候直接解析出来<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675061715097.png" alt="" loading="lazy"><br>
+-全局数据预处理 一般项目中用不上</p>
+<!-- more -->
+<pre><code>自定义处理异常
+</code></pre>
+<p>写一个类去自定义处理各种异常情况<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675064184437.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>解决跨域问题 cors ---- Cross Origin Resources sharing
+</code></pre>
+<p>-加注解@CrossOrigin(&quot;http://localhost:8081&quot;, xxxx)</p>
+<!-- more -->
+<p>-自定义一个配置类去解决跨域<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675066254150.png" alt="" loading="lazy"><br>
+-直接注入crosFilter<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675066608837.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>配置拦截器Interceptor
+</code></pre>
+<p>-写一个自定义类用来配置<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675067822659.png" alt="" loading="lazy"><br>
+-写配置类配置拦截器<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675067882377.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>参数类型转换
+</code></pre>
+<p><img src="https://jiangzhengshan.github.io/post-images/1675072691198.png" alt="" loading="lazy"><br>
+-写一个类进行参数转换<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675072484805.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>浏览器角标
+</code></pre>
+<p>favicon制作 放在static下面名字固定favicon.icon</p>
+<!-- more -->
+<pre><code>AOP
+</code></pre>
+<p>简单理解就是在系统运行的时候添加代码的过程</p>
+<!-- more -->
+<pre><code>接口幂等性： 确保接口每次只能获取一次
+</code></pre>
+<p>视频中主要有两种方式 （全是由token作为uuid）<br>
+-拦截器方式<br>
+-Aop方式<br>
+https://blog.csdn.net/hc1285653662/article/details/122905066</p>
+<!-- more -->
+<pre><code>@PathVariable注解的用法和作用
+</code></pre>
+<p>https://blog.csdn.net/weixin_45393094/article/details/108814901</p>
+<!-- more -->
+<pre><code>Spring Cache
+</code></pre>
+<p>一.结合redis使用<br>
+-@EnableCaching<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675667641989.png" alt="" loading="lazy"><br>
+-@Cacheable(cacaheNames=&quot;xx&quot;)<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675667532434.png" alt="" loading="lazy"><br>
+-@CachePut<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675667554659.png" alt="" loading="lazy"><br>
+-@CacheEvict<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675667574099.png" alt="" loading="lazy"><br>
+-@Caching<br>
+组合操作，把前面的三个都放在一起一般不用<br>
+-@CacheConfig<br>
+放在类上，做一些全局性的配置(cacheNames = &quot;c1&quot;) @Cacheable不用配置cacheNames<br>
+二.ehcache<br>
+http://www.javaboy.org/2019/1219/springboot-ehcache.html</p>
+<!-- more -->
+<pre><code>Spring Security
+</code></pre>
+<p>加入依赖就说明把所有的接口保护起来了<br>
+-手动配置用户名，密码和角色，一般配置在数据库中<br>
+1⃣️在配置文件中配置spring.security.user.xxx=<br>
+2⃣️写一个配置SecurityConfig类专门配置（Spring5以后密码必须加密才能使用）如果不使用密码加密使用PasswordEncoder<br>
+-RememberMe （TokenBasedRememberMeService）<br>
+http://itboyhub.com/2021/01/25/spring-security-autologin/<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675933778462.png" alt="" loading="lazy"><br>
+如过不把key写死的话，每次重启服务端key是uuid的随机数一直变<br>
+-自动登录控制安全<br>
+(PersistentTokenBasedRememberMeServices) 保存持久化令牌<br>
+http://itboyhub.com/2021/01/25/spring-security-autologin-risk/</p>
+<!-- more -->
+<pre><code>WebSocket 实现聊天室
+</code></pre>
+<p>引入四个webjars<br>
+https://github.com/lenve/springboot-samples-2.4.x/tree/main/chapter11<br>
+<img src="https://jiangzhengshan.github.io/post-images/1675928244471.png" alt="" loading="lazy"></p>
+<!-- more -->
+<pre><code>邮件发送
+</code></pre>
+<p>http://itboyhub.com/2021/01/25/java-mail/</p>
+<!-- more -->
+<pre><code>定时任务的两种实现方式
+</code></pre>
+<p>http://itboyhub.com/2021/01/25/spring-boot2-schedule/</p>
+<!-- more -->
+<pre><code>数据校验 validation
+</code></pre>
+<p>http://itboyhub.com/2021/01/28/springmvc-exception-validation/</p>
+<!-- more -->
+<pre><code>应用监控 actuator
+</code></pre>
+<p>http://itboyhub.com/2021/02/03/spring-boot-actuator/</p>
+<!-- more -->
+<pre><code>编译打包
+</code></pre>
+<p>http://itboyhub.com/2021/01/25/spring-boot2-jar/</p>
+<!-- more -->
+<pre><code>csrf
+</code></pre>
+<p>http://itboyhub.com/2021/01/25/spring-security-csrf/</p>
+<!-- more --> 
+<pre><code>动态权限配置
+</code></pre>
+<p>http://itboyhub.com/2021/01/25/spring-security-authorize-4/</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://jiangzhengshan.github.io/tag/PlMuSW8p8/" class="tag">
+                    StringBoot
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jiangzhengshan.github.io/post/flyway-shu-ju-ku-ban-ben-kong-zhi/">
+                  <h3 class="post-title">
+                    Flyway 数据库版本控制
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

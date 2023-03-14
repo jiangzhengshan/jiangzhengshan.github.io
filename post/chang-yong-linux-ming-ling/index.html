@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>常用Linux 命令 | jiangzhengshan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jiangzhengshan.github.io/favicon.ico?v=1678776670121">
+<link rel="stylesheet" href="https://jiangzhengshan.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="查看xxx命令的历史
+history | grep xxx
+打开mysql
+mysql.server start
+mysql -u root -p
+打开keycloak
+sh /Users/jiangzhengshan/SSO\ Serve..." />
+    <meta name="keywords" content="Linux" />
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jiangzhengshan.github.io">
+        <img src="https://jiangzhengshan.github.io/images/avatar.png?v=1678776670121" class="site-logo">
+        <h1 class="site-title">jiangzhengshan</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/springboot" class="site-nav">
+            SpringBoot
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/chang-yong-linux-ming-ling" class="site-nav">
+            Linux 命令
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/jian-dan-li-jie-oauth-20-shou-quan-ji-zhi" class="site-nav">
+            OAuth2 协议
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-ren-shi-xiang-mu-zhi-shi-dian-zheng-li" class="site-nav">
+            微人事项目知识点
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/nginx" class="site-nav">
+            项目部署
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-xin-xiao-cheng-xu" class="site-nav">
+            微信小程序
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/jiangzhengshan" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      用来记录工作和生活中遇到的问题
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://jiangzhengshan.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          <div class="post-detail">
+            <h2 class="post-title">常用Linux 命令</h2>
+            <div class="post-date">2022-12-12 16:09</div>
+            
+            <div class="post-content" v-pre>
+              <p>查看xxx命令的历史<br>
+history | grep xxx</p>
+<p>打开mysql<br>
+mysql.server start<br>
+mysql -u root -p</p>
+<p>打开keycloak<br>
+sh /Users/jiangzhengshan/SSO\ Server/keycloak-14.0.0-mysql/bin/standalone.sh</p>
+<p>本地往服务器上发服务<br>
+scp -i /Users/jiangzhengshan/106.15.138.237.pem  /Users/jiangzhengshan/InsightLite/InsightLite.war root@106.15.138.237:/usr/local/tomcat4tmr/InsightLite</p>
+<p>连接服务器<br>
+ssh -i /Users/jiangzhengshan/106.15.138.237.pem root@106.15.138.237</p>
+<p>图片和音频的地址<br>
+/usr/local/apache-tomcat-9.0.52/webapps/resource/voice/</p>
+<p>查看服务器上的log 日志<br>
+cd  /usr/local/apache-tomcat-9.0.52<br>
+tail -f logs/catalina.out</p>
+<p>向服务器上添加声音<br>
+scp -i /Users/jiangzhengshan/106.15.138.237.pem /Users/jiangzhengshan/Desktop/rightEyeTest.wav<br>
+root@106.15.138.237:/usr/local/apache-tomcat-9.0.52/webapps/resource/voice/rightEyeTest.wav</p>
+
+            </div>
+            
+              <div class="tag-container">
+                
+                  <a href="https://jiangzhengshan.github.io/tag/2BIO49ot9/" class="tag">
+                    Linux
+                  </a>
+                
+              </div>
+            
+            
+              <div class="next-post">
+                <div class="next">下一篇</div>
+                <a href="https://jiangzhengshan.github.io/post/wei-xin-xiao-cheng-xu/">
+                  <h3 class="post-title">
+                    InsightLite
+                  </h3>
+                </a>
+              </div>
+            
+
+            
+
+          </div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>

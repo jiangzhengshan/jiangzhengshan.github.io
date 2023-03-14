@@ -1,0 +1,316 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8" >
+
+<title>jiangzhengshan</title>
+
+<meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+
+<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.7.2/css/all.css" integrity="sha384-fnmOCqbTlWIlj8LyTjo7mOUStjsKC4pOpQbqyi7RrhN7udi9RwhKkMHpvLbHG9Sr" crossorigin="anonymous">
+<link rel="shortcut icon" href="https://jiangzhengshan.github.io/favicon.ico?v=1678776670121">
+<link rel="stylesheet" href="https://jiangzhengshan.github.io/styles/main.css">
+
+
+
+<link rel="stylesheet" href="https://unpkg.com/aos@next/dist/aos.css" />
+<script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+
+
+    <meta name="description" content="用来记录工作和生活中遇到的问题">
+    
+  </head>
+  <body>
+    <div id="app" class="main">
+
+      <div class="sidebar" :class="{ 'full-height': menuVisible }">
+  <div class="top-container" data-aos="fade-right">
+    <div class="top-header-container">
+      <a class="site-title-container" href="https://jiangzhengshan.github.io">
+        <img src="https://jiangzhengshan.github.io/images/avatar.png?v=1678776670121" class="site-logo">
+        <h1 class="site-title">jiangzhengshan</h1>
+      </a>
+      <div class="menu-btn" @click="menuVisible = !menuVisible">
+        <div class="line"></div>
+      </div>
+    </div>
+    <div>
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/springboot" class="site-nav">
+            SpringBoot
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/chang-yong-linux-ming-ling" class="site-nav">
+            Linux 命令
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/jian-dan-li-jie-oauth-20-shou-quan-ji-zhi" class="site-nav">
+            OAuth2 协议
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-ren-shi-xiang-mu-zhi-shi-dian-zheng-li" class="site-nav">
+            微人事项目知识点
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/nginx" class="site-nav">
+            项目部署
+          </a>
+        
+      
+        
+          <a href="https://jiangzhengshan.github.io/post/wei-xin-xiao-cheng-xu" class="site-nav">
+            微信小程序
+          </a>
+        
+      
+    </div>
+  </div>
+  <div class="bottom-container" data-aos="flip-up" data-aos-offset="0">
+    <div class="social-container">
+      
+        
+          <a class="social-link" href="https://github.com/jiangzhengshan" target="_blank">
+            <i class="fab fa-github"></i>
+          </a>
+        
+      
+        
+      
+        
+      
+        
+      
+        
+      
+    </div>
+    <div class="site-description">
+      用来记录工作和生活中遇到的问题
+    </div>
+    <div class="site-footer">
+       | <a class="rss" href="https://jiangzhengshan.github.io/atom.xml" target="_blank">RSS</a>
+    </div>
+  </div>
+</div>
+
+
+      <div class="main-container">
+        <div class="content-container" data-aos="fade-up">
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/vue/">
+                  <h2 class="post-title">Vue</h2>
+                </a>
+                <div class="post-date">
+                  2023-02-14 15:54
+                </div>
+                <div class="post-abstract">
+                  <pre><code>MVVM 
+</code></pre>
+<p>双向绑定 意思就是数据发生变化视图就会发生变化</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/wei-ren-shi-xiang-mu-zhi-shi-dian-zheng-li/">
+                  <h2 class="post-title">微人事项目知识点整理</h2>
+                </a>
+                <div class="post-date">
+                  2023-02-14 15:37
+                </div>
+                <div class="post-abstract">
+                  <p>项目中应用的技术<br>
+1.SpringBoot(SSM)<br>
+2.SpringSecurity(权限管理)<br>
+3.redis<br>
+4.POI/邮件发送/消息中间件<br>
+5.MySQL<br>
+6.vue<br>
+7.axios<br>
+8.ElementUI<br>
+9Vuex</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/springboot/">
+                  <h2 class="post-title">SpringBoot</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-13 11:02
+                </div>
+                <div class="post-abstract">
+                  <pre><code>? 多方登陆
+？短信请求
+？二维码支付
+？模糊检索
+？kafaka
+？各种注解之间的不同之处
+
+注解
+</code></pre>
+<p>@SprinBootConfiguration: @Config 增强和代理<br>
+@EnableAutoConfiguration:  导入自动化配置<br>
+@ComponentScan: 扫描启动类</p>
+
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/flyway-shu-ju-ku-ban-ben-kong-zhi/">
+                  <h2 class="post-title">Flyway 数据库版本控制</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-12 15:00
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/rabbitmq/">
+                  <h2 class="post-title">消息中间件</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-12 14:55
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/redis/">
+                  <h2 class="post-title">redis</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-12 10:40
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/npm-install-bao-cuo/">
+                  <h2 class="post-title">npm install 报错</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-11 17:56
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/https-qing-qiu-de-zheng-ge-guo-cheng-de-xiang-xi-fen-xi/">
+                  <h2 class="post-title">HTTPS请求的整个过程的详细分析</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-10 16:48
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/jian-dan-li-jie-oauth-20-shou-quan-ji-zhi/">
+                  <h2 class="post-title">简单理解OAuth 2.0授权机制</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-09 14:39
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+            <article class="post-item">
+              <div class="left">
+                <a href="https://jiangzhengshan.github.io/post/nginx/">
+                  <h2 class="post-title">Nginx</h2>
+                </a>
+                <div class="post-date">
+                  2023-01-09 10:28
+                </div>
+                <div class="post-abstract">
+                  
+                </div>
+              </div>
+              
+            </article>
+          
+
+          <div class="pagination-container">
+  
+  
+    <a href="https://jiangzhengshan.github.io/page/2" class="next">下一页 <i class="icon-arrow-ios-forward-outline"></i></a>
+  
+</div>
+
+        </div>
+      </div>
+    </div>
+
+    <script src="https://unpkg.com/aos@next/dist/aos.js"></script>
+<script type="application/javascript">
+
+AOS.init();
+
+var app = new Vue({
+  el: '#app',
+  data: {
+    menuVisible: false,
+  },
+})
+
+</script>
+
+
+
+
+
+
+  </body>
+</html>
